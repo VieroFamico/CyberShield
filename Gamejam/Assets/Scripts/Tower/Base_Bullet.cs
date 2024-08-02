@@ -8,6 +8,8 @@ public class Base_Bullet : MonoBehaviour
     public int damage = 10;
     public float moveSpeed = 5;
 
+    public GameObject impactEffect;
+
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +34,8 @@ public class Base_Bullet : MonoBehaviour
         Base_Enemy enemy = collision.gameObject.GetComponent<Base_Enemy>();
         if (enemy != null)
         {
+            GameObject effect = Instantiate(impactEffect, transform.position, Quaternion.identity);
+            Destroy(effect, effect.GetComponent<ParticleSystem>().main.startLifetimeMultiplier);
             enemy.TakeDamage(damage);
             Destroy(gameObject);
             return;

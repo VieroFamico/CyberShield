@@ -10,13 +10,23 @@ public class TowerHotBar : MonoBehaviour
     [System.Serializable]
     public class BuildingBar
     {
-        public Button building;
+        public Button towerButton;
+        public Base_Tower towerPrefabs;
         public Image cooldownImage;
         public TextMeshProUGUI cooldownText;
     }
 
     public BuildingBar[] buildingBar;
 
+    private Base_Tower selectedTower = null;
+
+    private void Awake()
+    {
+        foreach (BuildingBar b in buildingBar)
+        {
+            b.towerButton.onClick.AddListener(() => SelectBuilding(b.towerPrefabs));
+        }
+    }
     void Start()
     {
         
@@ -25,6 +35,14 @@ public class TowerHotBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(selectedTower != null)
+        {
+
+        }
+    }
+
+    private void SelectBuilding(Base_Tower selectedTowerPrefabs)
+    {
+        selectedTower = selectedTowerPrefabs;
     }
 }

@@ -25,7 +25,7 @@ public class TowerHotBar : MonoBehaviour
 
     public Image selectedBuildingImage;
 
-    public GameObject hintForWhenSelected;
+    //public GameObject hintForWhenSelected;
 
     private Base_Tower selectedTower = null;
     private BuildingNode selectedBuildNode = null;

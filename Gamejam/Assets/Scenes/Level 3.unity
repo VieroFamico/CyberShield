@@ -8941,7 +8941,6 @@ MonoBehaviour:
     cooldownText: {fileID: 718501552}
     index: 0
   selectedBuildingImage: {fileID: 368773847}
-  hintForWhenSelected: {fileID: 0}
 --- !u!1001 &1199155519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15749,7 +15748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2e26ff0c9e1e448b5a5f46ed12a332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randerObject: {fileID: 0}
+  randerObject: {fileID: 1853629936}
   seconds: 5
 --- !u!114 &2071418215
 MonoBehaviour:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.Rendering.DebugUI;
 
 public class GameManager : MonoBehaviour
@@ -25,7 +26,12 @@ public class GameManager : MonoBehaviour
 
     public void UnlockNextLevel()
     {
-        unlockedLevel++;
+        int currentLevel = SceneManager.GetActiveScene().buildIndex - 1;
+        if(unlockedLevel >= currentLevel)
+        {
+            return;
+        }
+        unlockedLevel = currentLevel;
     }
 
     private void OnApplicationQuit()

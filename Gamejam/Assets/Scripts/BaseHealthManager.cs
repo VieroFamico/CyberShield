@@ -66,6 +66,7 @@ public class BaseHealthManager : MonoBehaviour
     public void Win()
     {
         winPanel.SetTrigger("Show");
+        GameManager.instance.UnlockNextLevel();
         //Invoke("Pause", 1f);
     }
 

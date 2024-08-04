@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
     public int spawnerIndex;
 
     public float timeBetweenWaves = 3f;
-    private float countdown = 2f;
+    public float countdown = 2f;
 
     private int wavesIndex = 0;
     private int groupIndex = 0;

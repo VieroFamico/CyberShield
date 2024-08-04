@@ -50,3 +50,9 @@ TagManager:
   - name: RGB
     uniqueID: 966791127
     locked: 0
+  - name: Enemy
+    uniqueID: 1647126043
+    locked: 0
+  - name: Tower
+    uniqueID: 2940784721
+    locked: 0

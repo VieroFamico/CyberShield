@@ -21,13 +21,15 @@ public class Base_Enemy : MonoBehaviour
     public float fireCountdown = 0f;
 
     private Transform destinationTarget;
+    private int spawnerIndex = 0;
     private int waypointIndex = 0;
 
     private int serverDamageDealt = 1;
     void Start()
     {
-        destinationTarget = EnemyWayPoints.instance.points[waypointIndex];
+        destinationTarget = EnemyWayPoints.instance.spawnpoints[spawnerIndex].points[waypointIndex];
         StartCoroutine(UpdateClosestTower());
+        transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
     }
 
     // Update is called once per frame
@@ -37,11 +39,11 @@ public class Base_Enemy : MonoBehaviour
 
         if(dir < 0)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
         }
         else
         {
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); ;
         }
 
         transform.position = Vector2.MoveTowards(transform.position, destinationTarget.position, speed * Time.deltaTime);
@@ -56,7 +58,6 @@ public class Base_Enemy : MonoBehaviour
         if (fireCountdown <= 0f)
         {
             Shoot();
-            Debug.Log("enemy shooting");
             fireCountdown = secondsUntilFire;
         }
 
@@ -66,14 +67,19 @@ public class Base_Enemy : MonoBehaviour
     private void GetNextTarget()
     {
         waypointIndex++;
-        if (waypointIndex >= EnemyWayPoints.instance.points.Length)
+        if (waypointIndex >= EnemyWayPoints.instance.spawnpoints[spawnerIndex].points.Length)
         {
             BaseHealthManager.instance.TakeDamage(serverDamageDealt);
             Destroy(gameObject);
             return;
         }
 
-        destinationTarget = EnemyWayPoints.instance.points[waypointIndex];
+        destinationTarget = EnemyWayPoints.instance.spawnpoints[spawnerIndex].points[waypointIndex];
+    }
+
+    public void SetSpawnerIndex(int index)
+    {
+        spawnerIndex = index;
     }
 
     #region Dealing and Taking Damage

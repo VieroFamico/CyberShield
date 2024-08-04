@@ -5,9 +5,13 @@ using UnityEngine;
 public class EnemyWayPoints : MonoBehaviour
 {
     public static EnemyWayPoints instance;
+    [System.Serializable]
+    public class SpawnPoints
+    {
+        public Transform[] points;
+    }
 
-    public Transform[] points;
-
+    public SpawnPoints[] spawnpoints;
     private void Awake()
     {
         instance = this;

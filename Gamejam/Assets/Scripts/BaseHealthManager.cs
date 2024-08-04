@@ -20,6 +20,7 @@ public class BaseHealthManager : MonoBehaviour
         {
             healthImages.Add(healthDisplay.transform.GetChild(i).gameObject);
         }
+        healthDisplay.enabled = false;
     }
     
     public void TakeDamage(int damage)

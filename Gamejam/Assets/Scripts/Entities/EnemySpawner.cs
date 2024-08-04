@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
 
     public SpawnedWave[] waves;
     public Transform spawnPoint;
+    public int spawnerIndex;
 
     public float timeBetweenWaves = 3f;
     private float countdown = 2f;
@@ -73,7 +74,9 @@ public class EnemySpawner : MonoBehaviour
     {
         while(spawning)
         {
-            Instantiate(group.typeOfEnemy, spawnPoint.position, spawnPoint.rotation);
+            Base_Enemy enemy = Instantiate(group.typeOfEnemy, spawnPoint.position, spawnPoint.rotation);
+            enemy.SetSpawnerIndex(spawnerIndex);
+            enemy.gameObject.transform.localScale = Vector3.one / 2f;
             yield return new WaitForSeconds(group.timeUntilSpawn);
         }
     }

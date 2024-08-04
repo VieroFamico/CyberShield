@@ -33,6 +33,17 @@ public class Base_Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float dir = destinationTarget.position.x - transform.position.x;
+
+        if(dir < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else
+        {
+            transform.localScale = Vector3.one;
+        }
+
         transform.position = Vector2.MoveTowards(transform.position, destinationTarget.position, speed * Time.deltaTime);
         
         if(MathF.Abs(Vector2.Distance(transform.position, destinationTarget.position)) < 0.1f)

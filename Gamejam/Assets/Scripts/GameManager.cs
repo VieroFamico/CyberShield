@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
     public void UnlockNextLevel()
     {
         int currentLevel = SceneManager.GetActiveScene().buildIndex - 1;
+
+        if(currentLevel == 4)
+        {
+            SceneNavigation_Manager.instance.GoToEndingScene();
+        }
+
         if(unlockedLevel >= currentLevel)
         {
             return;

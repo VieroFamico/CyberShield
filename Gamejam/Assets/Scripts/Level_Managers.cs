@@ -20,7 +20,7 @@ public class Level_Managers : MonoBehaviour
         foreach(LevelButton levelButton in levelButtons)
         {
             levelButton.levelSelect.onClick.AddListener(() => SelectLevel(levelButton.level));
-            levelButton.levelSelect.enabled = false;
+            levelButton.levelSelect.interactable = false;
         }
         goToHomeButton.onClick.AddListener(SceneNavigation_Manager.instance.GoToHomeScene);
     }
@@ -33,7 +33,7 @@ public class Level_Managers : MonoBehaviour
             {
                 break;
             }
-            levelButtons[i].levelSelect.enabled = true;
+            levelButtons[i].levelSelect.interactable = true;
         }
     }
 

@@ -54,6 +54,12 @@ public class SceneNavigation_Manager : MonoBehaviour
         StartCoroutine(GoToSceneWithAnimation(1));
     }
 
+    public void GoToEndingScene()
+    {
+        StartCoroutine(EndingScene());
+    }
+
+
     private IEnumerator GoToSceneWithAnimation(int targetIndex)
     {
         loadingScreen.GetComponent<Animator>().SetTrigger("Show");
@@ -65,5 +71,15 @@ public class SceneNavigation_Manager : MonoBehaviour
         loadingScreen.GetComponent<Animator>().SetTrigger("Hide");
     }
 
+    public IEnumerator EndingScene()
+    {
+        GoToSceneWithAnimation(7);
+
+        yield return new WaitForSeconds(2f);
+
+        yield return new WaitForSeconds(10f);
+
+        GoToSceneWithAnimation(0);
+    }
      
 }

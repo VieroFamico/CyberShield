@@ -36,11 +36,22 @@ public class SceneNavigation_Manager : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(GoToSceneWithAnimation(currentSceneIndex + levelSceneIndex));
+        Time.timeScale = 1f;
     }
 
     public void GoToHomeScene()
     {
         StartCoroutine(GoToSceneWithAnimation(0));
+    }
+
+    public void RetryScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(GoToSceneWithAnimation(currentSceneIndex));
+    }
+    public void GoToLevelSelect()
+    {
+        StartCoroutine(GoToSceneWithAnimation(1));
     }
 
     private IEnumerator GoToSceneWithAnimation(int targetIndex)

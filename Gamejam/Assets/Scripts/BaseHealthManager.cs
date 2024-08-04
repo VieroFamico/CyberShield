@@ -7,12 +7,15 @@ public class BaseHealthManager : MonoBehaviour
 {
     public static BaseHealthManager instance;
 
-    public GameObject losePanel;
-    public GameObject winPanel;
+    public Animator losePanel;
+    public Animator winPanel;
+    public Button retryButton;
+    public Button goBackToLevelSelectionButton;
     public HorizontalLayoutGroup healthDisplay;
     public List<GameObject> healthImages;
 
     public int HealthPoint = 5;
+    private bool noMoreWaves = false;
     private void Awake()
     {
         instance = this;
@@ -21,8 +24,22 @@ public class BaseHealthManager : MonoBehaviour
             healthImages.Add(healthDisplay.transform.GetChild(i).gameObject);
         }
         healthDisplay.enabled = false;
+
+        retryButton.onClick.AddListener(SceneNavigation_Manager.instance.RetryScene);
+        goBackToLevelSelectionButton.onClick.AddListener(SceneNavigation_Manager.instance.GoToLevelSelect);
     }
-    
+    private void Update()
+    {
+        if(noMoreWaves)
+        {
+            Base_Enemy enemies = FindAnyObjectByType<Base_Enemy>();
+
+            if(enemies == null)
+            {
+                Win();
+            }
+        }
+    }
     public void TakeDamage(int damage)
     {
         HealthPoint -= damage;
@@ -34,8 +51,20 @@ public class BaseHealthManager : MonoBehaviour
         }
     }
 
+    public void EndingWaves()
+    {
+        noMoreWaves = true;
+    }
+
     private void Lose()
     {
-        Debug.Log("Lost");
+        losePanel.SetTrigger("Show");
+        Time.timeScale = 0f;
+
+    }
+    public void Win()
+    {
+        winPanel.SetTrigger("Show");
+        Time.timeScale = 0f;
     }
 }

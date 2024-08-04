@@ -66,7 +66,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else
         {
-            EndLevel();
+            EndWaves();
         }
     }
 
@@ -81,8 +81,8 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void EndLevel()
+    private void EndWaves()
     {
-        Debug.Log("End");
+        BaseHealthManager.instance.EndingWaves();
     }
 }

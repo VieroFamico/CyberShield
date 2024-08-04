@@ -1392,19 +1392,19 @@ MonoBehaviour:
   waves:
   - groups:
     - typeOfEnemy: {fileID: -402138702545221070, guid: 5d0e97729fbb7774f9aef29722c4f8eb, type: 3}
-      timeUntilSpawn: 8
-    waveTimeLength: 1
+      timeUntilSpawn: 16
+    waveTimeLength: 60
   - groups:
     - typeOfEnemy: {fileID: -402138702545221070, guid: 5d0e97729fbb7774f9aef29722c4f8eb, type: 3}
-      timeUntilSpawn: 6.5
-    waveTimeLength: 1
+      timeUntilSpawn: 13
+    waveTimeLength: 60
   - groups:
     - typeOfEnemy: {fileID: -402138702545221070, guid: 5d0e97729fbb7774f9aef29722c4f8eb, type: 3}
-      timeUntilSpawn: 5
-    waveTimeLength: 1
+      timeUntilSpawn: 10
+    waveTimeLength: 60
   spawnPoint: {fileID: 1780177610}
   spawnerIndex: 1
-  timeBetweenWaves: 0
+  timeBetweenWaves: 3
 --- !u!1001 &366263481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5656,19 +5656,19 @@ MonoBehaviour:
   waves:
   - groups:
     - typeOfEnemy: {fileID: -402138702545221070, guid: 5d0e97729fbb7774f9aef29722c4f8eb, type: 3}
-      timeUntilSpawn: 8
-    waveTimeLength: 1
+      timeUntilSpawn: 16
+    waveTimeLength: 60
   - groups:
     - typeOfEnemy: {fileID: -402138702545221070, guid: 5d0e97729fbb7774f9aef29722c4f8eb, type: 3}
-      timeUntilSpawn: 6.5
-    waveTimeLength: 1
+      timeUntilSpawn: 13
+    waveTimeLength: 60
   - groups:
     - typeOfEnemy: {fileID: -402138702545221070, guid: 5d0e97729fbb7774f9aef29722c4f8eb, type: 3}
-      timeUntilSpawn: 5
-    waveTimeLength: 1
+      timeUntilSpawn: 10
+    waveTimeLength: 60
   spawnPoint: {fileID: 1535665726}
   spawnerIndex: 0
-  timeBetweenWaves: 0
+  timeBetweenWaves: 3
 --- !u!1 &729804567
 GameObject:
   m_ObjectHideFlags: 0

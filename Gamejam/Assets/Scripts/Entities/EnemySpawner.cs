@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if(countdown <= 0)
         {
-            Debug.Log("Wave " + wavesIndex + 1);
+            Debug.Log("Wave " + (wavesIndex + 1));
             StartCoroutine(SpawnWaves());
             countdown = float.PositiveInfinity;
         }

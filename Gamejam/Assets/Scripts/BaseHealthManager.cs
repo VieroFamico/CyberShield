@@ -59,12 +59,14 @@ public class BaseHealthManager : MonoBehaviour
     private void Lose()
     {
         losePanel.SetTrigger("Show");
-        Time.timeScale = 0f;
-
+        //Invoke("Pause", 1f);
     }
+
+    
     public void Win()
     {
         winPanel.SetTrigger("Show");
-        Time.timeScale = 0f;
+        //Invoke("Pause", 1f);
     }
+
 }

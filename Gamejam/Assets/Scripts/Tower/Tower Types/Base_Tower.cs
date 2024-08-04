@@ -6,6 +6,7 @@ public class Base_Tower : MonoBehaviour
 {
     [Header("Attributes")]
     public Transform target;
+    public BuildingNode placedBuildingNode;
     public int healthPoint;
     public float range = 10f;
 
@@ -55,6 +56,7 @@ public class Base_Tower : MonoBehaviour
         {
             healthPoint = 0;
             Destroy(gameObject);
+            placedBuildingNode.PlacedATower();
             return;
         }
     }

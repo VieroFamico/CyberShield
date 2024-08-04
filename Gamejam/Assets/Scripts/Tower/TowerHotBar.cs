@@ -53,8 +53,9 @@ public class TowerHotBar : MonoBehaviour
                 {
                     if (selectedBuildNode.IsPlacable())
                     {
-                        Instantiate(selectedTower, selectedBuildNode.transform.position, Quaternion.identity, selectedBuildNode.transform);
+                        Base_Tower tower = Instantiate(selectedTower, selectedBuildNode.transform.position, Quaternion.identity, selectedBuildNode.transform);
                         selectedBuildNode.PlacedATower();
+                        tower.placedBuildingNode = selectedBuildNode;
 
                         DeselectBuilding();
                     }

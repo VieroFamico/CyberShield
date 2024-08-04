@@ -955,6 +955,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1430135848}
   spawnerIndex: 1
   timeBetweenWaves: 3
+  countdown: 2
 --- !u!1 &232698592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1016,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 480565395}
   spawnerIndex: 2
   timeBetweenWaves: 3
+  countdown: 2
 --- !u!1001 &241699878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,7 +1366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 7.516, y: 0.07}
+  m_AnchoredPosition: {x: 6.53, y: -0.5}
   m_SizeDelta: {x: 21.9041, y: 3.8915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &295636423
@@ -9217,6 +9219,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 654850158}
   spawnerIndex: 0
   timeBetweenWaves: 3
+  countdown: 2
 --- !u!1001 &1187830737
 PrefabInstance:
   m_ObjectHideFlags: 0

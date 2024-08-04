@@ -28,7 +28,7 @@ public class BuildingNode : MonoBehaviour
                 SpriteRenderer spriteRenderer = spriteGameObject.AddComponent<SpriteRenderer>();
                 spriteRenderer.sprite = towerSprite;
                 spriteRenderer.sortingLayerName = "ForeGround";
-                spriteRenderer.sortingOrder = 5;
+                spriteRenderer.sortingOrder = 20;
                 spriteGameObject.transform.position = transform.position;
 
             }

@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6883253314482626728}
   - component: {fileID: 1851373673307277998}
   m_Layer: 0
-  m_Name: Malware
+  m_Name: Stealth Virus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: -475730757
   m_SortingLayer: 1
   m_SortingOrder: 9
-  m_Sprite: {fileID: 1341507476, guid: c65dd473c5133a541beea01ce0f26796, type: 3}
+  m_Sprite: {fileID: 788323008, guid: 60209eb0d44d7e84f97410a6d424c624, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -213,7 +213,7 @@ Animator:
   m_GameObject: {fileID: 7375519734804904782}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1247f2aa8db1eb84793111dacc4597a8, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

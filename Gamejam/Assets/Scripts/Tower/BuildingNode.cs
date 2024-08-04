@@ -30,6 +30,7 @@ public class BuildingNode : MonoBehaviour
                 spriteRenderer.sortingLayerName = "ForeGround";
                 spriteRenderer.sortingOrder = 20;
                 spriteGameObject.transform.position = transform.position;
+                spriteGameObject.transform.localScale = Vector3.one / 2;
 
             }
         }

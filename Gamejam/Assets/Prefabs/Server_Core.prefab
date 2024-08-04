@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1901533388035038822, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: m_Name
-      value: IDS IPS
+      value: Server_Core
       objectReference: {fileID: 0}
     - target: {fileID: 2084559700868268247, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2084559700868268247, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2084559700868268247, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 2383081476124805618, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1064488809, guid: 9f9e02b80a679d84eab6f850501856a9, type: 3}
+      objectReference: {fileID: -722512072, guid: 9f9e02b80a679d84eab6f850501856a9, type: 3}
     - target: {fileID: 3230758752375567775, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: damage
       value: 15
@@ -80,39 +80,5 @@ PrefabInstance:
     - {fileID: 3230758752375567775, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1901533388035038822, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -2576536091706245847}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
---- !u!1 &6225305306274269816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1901533388035038822, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
-  m_PrefabInstance: {fileID: 5478383462682104862}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-2576536091706245847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6225305306274269816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5012e853c28962e4c9d8c9263a35a92a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  placedBuildingNode: {fileID: 0}
-  healthPoint: 150
-  range: 4
-  bulletPrefabs: {fileID: 8717674583603177433, guid: 8439b46ba1bb2e24087d001f93418c97, type: 3}
-  firePoint: {fileID: 8868920318396162906}
-  damage: 15
-  secondsUntilFire: 1
-  fireCountdown: 0
---- !u!4 &8868920318396162906 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3968687984755472196, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
-  m_PrefabInstance: {fileID: 5478383462682104862}
-  m_PrefabAsset: {fileID: 0}

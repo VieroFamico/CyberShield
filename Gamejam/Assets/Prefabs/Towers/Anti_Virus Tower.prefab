@@ -13,6 +13,14 @@ PrefabInstance:
       value: Anti_Virus Tower
       objectReference: {fileID: 0}
     - target: {fileID: 2084559700868268247, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084559700868268247, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084559700868268247, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -52,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2383081476124805618, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 747316333, guid: 9f9e02b80a679d84eab6f850501856a9, type: 3}
     - target: {fileID: 3230758752375567775, guid: 360f8d9c687e9b142ba86f46832d540b, type: 3}
       propertyPath: damage
       value: 10
@@ -91,9 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  placedBuildingNode: {fileID: 0}
   healthPoint: 100
   range: 4
-  bulletPrefabs: {fileID: 8717674583603177433, guid: 83ce11a8b9bdc7542bc8b6e2cad6b21c, type: 3}
+  bulletPrefabs: {fileID: 8717674583603177433, guid: 9c0e796f8e247ef46bb64aa9569d021b, type: 3}
   firePoint: {fileID: 8868920318396162906}
   damage: 10
   secondsUntilFire: 0.5

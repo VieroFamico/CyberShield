@@ -134,12 +134,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerTarget: {fileID: 0}
   speed: 2
-  healthPoint: 50
+  healthPoint: 70
   bulletPrefabs: {fileID: 8717674583603177433, guid: 92842cfb77d3a2344aae3a7a6a88faf7, type: 3}
   firePoint: {fileID: 3260194382162234094}
   damageDealt: 10
   range: 5
-  secondsUntilFire: 1.5
+  secondsUntilFire: 1
   fireCountdown: 0
 --- !u!58 &3761858556069157807
 CircleCollider2D:
